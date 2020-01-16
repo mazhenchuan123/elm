@@ -1,7 +1,21 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
-import { Basic, Users } from '@/services/ads'
+import { 
+	Basic, 
+	Users,
+	Home,
+	Profile,
+	Balance,
+	Benefit,
+	Points,
+	Order,
+	Integral,
+	Vipcard,
+	Download,
+	Service,
+	Userinfo,
+} from '@/services/ads'
 
 const routes = [
 	{
@@ -12,6 +26,55 @@ const routes = [
 	{
 		component: Basic,
 		path: '/',
+		routes: [
+			{
+				component: Balance,
+				path: '/balance',
+			},
+			{
+				component: Benefit,
+				path: '/benefit',
+			},
+			{
+				component: Points,
+				path: '/points',
+			},
+			{
+				component: Order,
+				path: '/order',
+			},
+			{
+				component: Integral,
+				path: '/integral',
+			},
+			{
+				component: Vipcard,
+				path: '/vipcard',
+			},
+			{
+				component: Download,
+				path: '/download',
+			},
+			{
+				component: Service,
+				path: '/service',
+			},
+			{
+				component: Userinfo,
+				path: '/userinfo',
+			},
+			{
+				component: Home,
+				path: '/',
+				routes: [
+					{
+						component: Profile,
+						path: '/profile',
+					},
+				]
+			},
+
+		]
 	
 	}
 ]

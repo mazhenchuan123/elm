@@ -8,6 +8,5 @@ const defaultState = {
 
 export default handleActions({
   CESHI: (state, action) => ({ ...state, data: action.payload }),
- 
 }, defaultState)
 

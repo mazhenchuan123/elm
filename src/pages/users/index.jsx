@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import './style.less'
-export default class extends Component {
-
-    render() {
-        return (
-            <div>
-                users
-            </div>
-        )
-    }
+import React from 'react';
+import { renderRoutes } from 'react-router-config'
+export default class extends React.PureComponent {
+	render() {
+		return (
+			<div className='layoputs_users'>
+					{renderRoutes(this.props.route.routes)}
+			</div>
+		)
+	}
 }
+
 

@@ -1,0 +1,136 @@
+.takeaway{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #f5f5f5;
+    flex-direction: column;
+    header{
+        position: fixed;
+        width:100%;
+        height:1rem;
+        background: #3190e8;
+        display: flex;
+        font-size: 0.3rem;
+        color: #fff;
+        p{
+            width: 1rem;
+            height: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .takeawayHead{
+            flex: 1;
+            text-align: center;
+            line-height: 1rem;
+        }
+    }
+    section{
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        .secHead{
+            width: 100%;
+            height: 3rem;
+            .food{
+                background: #fff;
+                display: inline-block;
+                width: 25%;
+                height: 50%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        .secinfo{
+            width: 100%;
+            padding: 0.2rem 0.1rem;
+            box-sizing: border-box;
+            .secinfolist{
+                width: 100%;
+                line-height: 0.5rem;
+                display: flex;
+                padding: 0.15rem 0;
+                .infoimg{
+                    width: 1.4rem;
+                    height: auto;
+                }
+                .details{
+                    flex:1;
+                    padding-left: 0.2rem;
+                    box-sizing: border-box;
+                    .brandID{
+                        background: #ffd930;
+                    }
+                    .shopname{
+                        
+                        display: flex;
+                        .shopnames{
+                            padding-left: 0.1rem;
+                            box-sizing: border-box;
+                            flex: 1;
+                            font-size: 0.24rem;
+                            white-space: nowrap;
+                            overflow: hidden;    /* 内容超出宽度时隐藏超出部分的内容 */
+                            text-overflow: ellipsis;  
+                        }
+                        
+                    }
+                    .express{
+                        display: flex;
+                        .press{
+                            flex: 1;
+                        }
+                        .type{
+                            .fn{
+                                background: #3190e8;
+                                color: #fff;
+                                padding: 0 0.05rem;
+                                box-sizing: border-box;
+                                border: 0.1px solid #3190e8;
+                            }
+                            .zs{
+                                padding: 0 0.05rem;
+                                box-sizing: border-box;
+                                border: 0.1px solid #3190e8;
+                                background: #fff;
+                                color: #3190e8; 
+                            }
+                        }
+                    }
+                    .fist{
+                        display: flex;
+                        .price{
+                            flex: 1;
+                        }
+                        .times{
+                            color: #3190e8;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        width:100%;
+        height:1rem;
+        background: #3190e8; 
+        display: flex;
+        color: #fff;
+        p{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.3rem;
+        }
+    }
+}

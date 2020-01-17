@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
-import './style.less'
-export default class extends Component {
+import React from 'react';
+import { renderRoutes } from 'react-router-config'
+import WithRouter from '@@/WithRouter'
 
-    render() {
-        return (
-            <div className="basic">
-                basic
-            </div>
-        )
-    }
+export default class extends React.PureComponent {
+	render() {
+		return (  
+			<div className='app'>
+					{/* 全局路由守卫 */}
+					<WithRouter routes={this.props.route.routes} />
+			</div>
+		)
+	}
 }
+
 

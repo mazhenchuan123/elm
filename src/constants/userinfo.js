@@ -4,10 +4,12 @@ export const listDataTop = [
   {
     title: '用户名',
     prompt: 'lep123456',
+    path: '/setname',
     
   },
   { 
     title: '收货地址',
+    path: '/address',
   },
 ]
 

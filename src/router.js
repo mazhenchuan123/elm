@@ -15,6 +15,8 @@ import {
 	Download,
 	Service,
 	Userinfo,
+	Setname,
+	Address,
 } from '@/services/ads'
 
 const routes = [
@@ -62,6 +64,14 @@ const routes = [
 			{
 				component: Userinfo,
 				path: '/userinfo',
+			},
+			{
+				component: Setname,
+				path: '/setname',
+			},
+			{
+				component: 	Address,
+				path: '/address',
 			},
 			{
 				component: Home,

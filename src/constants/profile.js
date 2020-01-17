@@ -3,7 +3,7 @@ import integralImg  from '@/assets/user2.png'
 import vipcardImg  from '@/assets/user3.png'
 import serviceImg  from '@/assets/user4.png'
 import downloadImg  from '@/assets/user5.png'
-export  const actionsData = [
+export const actionsData = [
   {
     money: '0.00', 
     title: '我的余额', 
@@ -27,7 +27,7 @@ export  const actionsData = [
   }
 ]
 
-export  const listDataTop = [
+export const listDataTop = [
   {
     imgurl: orderImg, 
     title: '我的订单',
@@ -45,7 +45,7 @@ export  const listDataTop = [
   },
 ]
 
-export  const listDataBtm = [
+export const listDataBtm = [
   {
     imgurl: serviceImg, 
     title: '服务中心',

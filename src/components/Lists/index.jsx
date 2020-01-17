@@ -5,20 +5,24 @@ import { withRouter } from 'react-router-dom'
 export default  @withRouter
 class extends React.PureComponent {
   onClcik = (path) => {
+    const { onClick } = this.props
     this.props.history.push(path)
+    onClick && onClick()
   }
   render () {
-    const { path, imgurl, title } = this.props
+    const { path, imgurl, title, prompt, style } = this.props
     return (
       <div className="comm_lists" onClick={() => this.onClcik(path)}>
-        <div className="comm_lists_left">
-          <span>
-            <img src={imgurl} alt=""/>
-          </span>
-        </div>
+          {
+            imgurl && <div className="comm_lists_left">
+              <span>
+                <img src={imgurl} alt=""/>
+              </span>
+            </div>
+          }
         <div className="comm_lists_right">
-          <p>{title}</p>
-          <label className="iconfont icon-you1"></label>
+          <p style={style} >{title}</p>
+          <span>{prompt}<label className="iconfont icon-you1"></label></span>
         </div>
       </div>
     )

@@ -2,19 +2,16 @@ import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
 import Gird from '@@/Gird'
 import Lists from '@@/Lists'
+import Head from '@@/Head'
 import { actionsData, listDataTop, listDataBtm } from '@/constants/profile'
 import './style.less'
+
 export default class extends PureComponent {
 	render() {
 		return (
 			<div className="pages_profile">
 				<div className="pages_profile_head">
-					<div className="pages_profile_title">
-						<Link to="/">
-							<span className="iconfont icon-icon4"></span>
-						</Link>	
-						<h3>我的</h3>
-					</div>
+					<Head title="我的" />
 					<div className="pages_profile_info">
 						<dl>
 							<dt>

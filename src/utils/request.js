@@ -38,3 +38,19 @@ export function requestGet(url, action = {}) {
 			})
 	})
 }
+
+export function requestDelete(url, action = {}) {
+	return new Promise((resolve, reject) => {
+		axios({
+			method: 'Delete',
+			url,
+			params: qs.stringify(action),
+		})
+			.then(res => {
+				resolve(res.data)
+			})
+			.catch(err => {
+				reject(err)
+			})
+	})
+}

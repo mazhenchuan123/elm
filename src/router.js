@@ -17,6 +17,7 @@ import {
 	Userinfo,
 	Setname,
 	Address,
+	FromAddress,
 } from '@/services/ads'
 
 const routes = [
@@ -72,6 +73,10 @@ const routes = [
 			{
 				component: 	Address,
 				path: '/address',
+			},
+			{
+				component: 	FromAddress,
+				path: '/fromaddress',
 			},
 			{
 				component: Home,

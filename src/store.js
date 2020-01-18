@@ -16,6 +16,7 @@ const rootPersistConfig = {
 //单独为 某个 reduce 做数据持久化
 const myPersistReducer = combineReducers({
 	index: rdc.home,
+	user: rdc.user,
 	login: persistReducer(
 		rootPersistConfig,
 		rdc.login

@@ -12,23 +12,23 @@ export default class extends PureComponent {
 			<div className="pages_profile">
 				<div className="pages_profile_head">
 					<Head title="我的" />
-					<div className="pages_profile_info">
-						<dl>
-							<dt>
-								<img src="//elm.cangdu.org/img/default.jpg" alt=""/>
-							</dt>
-							<dd>
-								<h4>lep123456</h4>
-								<p>
-									<span className="iconfont icon-jinggao3"></span>
-									暂无绑定手机号
-								</p>
-							</dd>
-						</dl>
-						<Link to="/userinfo">
-							<span className="iconfont  icon-you1"></span>
-						</Link>	
-					</div>
+					<Link to="/userinfo">
+						<div className="pages_profile_info">
+							<dl>
+								<dt>
+									<img src="//elm.cangdu.org/img/default.jpg" alt=""/>
+								</dt>
+								<dd>
+									<h4>lep123456</h4>
+									<p>
+										<span className="iconfont icon-jinggao3"></span>
+										暂无绑定手机号
+									</p>
+								</dd>
+							</dl>
+								<span className="iconfont  icon-you1"></span>
+						</div>
+					</Link>	
 				</div>
 				<div className="pages_profile_actions">
 					{

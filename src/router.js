@@ -6,18 +6,24 @@ import { Basic, Users } from '@/services/ads'
 
 const Takeaway = loader(() => import('@/pages/takeaway'))
 const Search = loader(() => import('@/pages/search'))
+const Screening = loader(() => import('@/pages/screening'))
 const routes = [
 	{
 		component: Users,
 		path: '/users',
 		routes: [
-			{
-				component: Takeaway,
-				path: '/users',
-			},
+			
 			{
 				component: Search,
 				path: '/users/search',
+			},
+			{
+				component: Screening,
+				path:'/users/screening',
+			},
+			{
+				component: Takeaway,
+				path: '/users',
 			}
 		]
 		

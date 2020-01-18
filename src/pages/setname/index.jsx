@@ -4,16 +4,21 @@ import './style.less'
 
 export default class extends PureComponent {
 	state = {
-		name: '1',
+		name: '',
 		disabled: false,
 	}
-	
-	setName = e => {
-		this.setState({
-			name: e.targe.value
-		})
-	
+	regExp = () => {
+		const { name } = this.state
+		const reg = /^[\w]{5,24}$/
+		reg.test(name) ? this.setState({ disabled: false }) :
+			this.setState({ disabled: true })
 	}
+	setName = event => {
+		this.setState({
+			name: event.target.value
+		})
+	}
+
 	render() {
 		const { name, disabled } = this.state
 		return (
@@ -22,7 +27,8 @@ export default class extends PureComponent {
 				<div className="setname_list">
 					<input 
 						type="text" 
-						onChange={this.setName} 
+						onChange={this.setName}
+						onKeyUp={this.regExp}
 						value={name} 
 						placeholder="输入用户名"
 						style={{border: disabled ? '1px solid red' : ''}}

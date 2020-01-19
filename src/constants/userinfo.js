@@ -1,7 +1,5 @@
 import userinfoImg from '@/assets/userinfo.png'
 
-export const GET_ADDRESS = 'GET_ADDRESS'
-
 export const listDataTop = [
   {
     title: '用户名',

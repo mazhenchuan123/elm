@@ -5,7 +5,7 @@ export default class extends PureComponent {
 
 	render() {
 		return (
-			<div className="pages_balance">
+			<div className="pages_points">
 				
       </div>
 		)

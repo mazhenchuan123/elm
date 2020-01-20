@@ -19,6 +19,8 @@ import {
 	Address,
 	FromAddress,
 	SearchAddress,
+	BalanceDetail,
+	PointsDetail,
 } from '@/services/ads'
 
 const routes = [
@@ -32,12 +34,21 @@ const routes = [
 		path: '/',
 		routes: [
 			{
+				component: BalanceDetail,
+				path: '/balance/detail',
+			},
+			{
 				component: Balance,
 				path: '/balance',
 			},
 			{
 				component: Benefit,
 				path: '/benefit',
+			},
+		
+			{
+				component: PointsDetail,
+				path: '/points/detail',
 			},
 			{
 				component: Points,

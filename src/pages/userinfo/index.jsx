@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import Head from '@@/Head'
 import Lists from '@@/Lists'
+
 import { listDataTop, listDataBtm } from '@/constants/userinfo'
 import api from '@/services/api'
 import { requestGet } from '@/utils/request'
@@ -38,7 +39,7 @@ export default class extends PureComponent {
 						listDataBtm.map(v => (
 							<React.Fragment key={v.title}>
 								<p className="userinfo_prompt">{v.label}</p>
-								<Lists {...v}/>
+								<Lists {...v} />
 							</React.Fragment>
 						))
 					}
@@ -46,7 +47,7 @@ export default class extends PureComponent {
 				<div className="pages_userinfo_foot">
 					<button onClick={this.onsignOut}>退出登录</button>
 				</div>
-			
+				
       </div>
 		)
 	}

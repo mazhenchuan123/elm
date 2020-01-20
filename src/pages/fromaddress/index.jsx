@@ -23,7 +23,13 @@ export default class extends PureComponent {
 		},
 		visitible: false,
 	}
-
+	componentDidMount () {
+		const { addressData } = this.state
+		this.setState({
+			addressData: {...addressData, ..._.get(this.props, 'location.state.addressData', '') }
+		})
+	
+	}
 	setName = (val) => {
 		const { addressData } = this.state
 		this.setState({
@@ -99,7 +105,6 @@ export default class extends PureComponent {
 		const address = _.get(this.props, 'location.state.addressData.address', '')
 		const phone = _.get(this.props, 'location.state.addressData.phone', '')
 		const phone_bk = _.get(this.props, 'location.state.addressData.phone_bk', '')
-		console.log(addressData)
 		return (
 			<div className="pages_formaddress">
 				<Head title="新增地址" />

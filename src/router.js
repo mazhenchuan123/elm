@@ -1,13 +1,22 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
-import { Basic, Users } from '@/services/ads'
+import { Basic, Users, City, Grt } from '@/services/ads'
 
 const routes = [
 	{
 		component: Users,
-		path: '/users',
-		
+		path: '/users',	
+	},
+	{
+		component: City,
+		path: '/city',
+		routes: [
+			{
+				component: Grt,
+				path: '/city/grt'
+			}
+		]	
 	},
 	{
 		component: Basic,

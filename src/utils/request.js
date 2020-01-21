@@ -22,7 +22,7 @@ axios.interceptors.request.use(config => {
 					u: config.url,
 			})
 	})
-	window.store.dispatch(home.loading(true))
+
 	return config
 }, error => {
 	return Promise.reject(error)
@@ -30,8 +30,6 @@ axios.interceptors.request.use(config => {
 
 //添加响应拦截器
 axios.interceptors.response.use(response => {
-	window.store.dispatch(home.loading(false))
-	
 	return response
 }, error => {
 	switch (_.get(error, 'response.status', '')) {

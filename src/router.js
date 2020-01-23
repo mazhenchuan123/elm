@@ -21,6 +21,9 @@ import {
 	SearchAddress,
 	BalanceDetail,
 	PointsDetail,
+	InvoiceRecord,
+	Usecart,
+	VipcardDetail,
 } from '@/services/ads'
 
 const routes = [
@@ -63,8 +66,20 @@ const routes = [
 				path: '/integral',
 			},
 			{
+				component: Usecart,
+				path: '/vipcard/usecart',
+			},
+			{
+				component: VipcardDetail,
+				path: '/vipcard/detail',
+			},
+			{
 				component: Vipcard,
 				path: '/vipcard',
+			},
+			{
+				component: InvoiceRecord,
+				path: '/invoicerecord',
 			},
 			{
 				component: Download,

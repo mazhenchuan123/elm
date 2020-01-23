@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import Head from '@@/Head'
 import Frame from '@@/Frame'
 import emptyImg from '@/assets/empty.png'
-import IconBtn from '@@/IconBtn'
 import './style.less'
 
 export default class extends PureComponent {
@@ -21,6 +20,7 @@ export default class extends PureComponent {
 						btntext="积分兑换商品"
 						captionText="积分说明"
 						handelClick={this.handelClick}
+						btnStyle={{ background: '#fe6d47'}}
 					/>
 				</div>
 				<div className="points_body">

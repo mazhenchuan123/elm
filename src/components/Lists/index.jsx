@@ -6,7 +6,7 @@ export default  @withRouter
 class extends React.PureComponent {
   onClcik = (path) => {
     const { onClick } = this.props
-    this.props.history.push(path)
+    path && this.props.history.push(path)
     onClick && onClick()
   }
   render () {

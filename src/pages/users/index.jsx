@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import './style.less'
 import axios from 'axios'
 import qs from 'qs'
-export default class extends Component {
+import { Imgs } from '@/actions/login'
+import { connect } from 'react-redux'
+export default @connect((state) => ({
+    adr: state
+}),{
+    Imgs
+}) class extends Component {
 
     state = {
         num: '',
@@ -11,6 +17,9 @@ export default class extends Component {
         img: ''
     }
     componentDidMount() {
+        this.tu()
+    }
+    tu = () => {
         axios.post('https://elm.cangdu.org/v1/captchas').then(res => {
             this.setState({
                 imgs: res.data.code
@@ -29,6 +38,7 @@ export default class extends Component {
         }).then(res => {
             console.log(res)
         })
+        this.tu()
     }
     onNum = e => {
         this.setState({

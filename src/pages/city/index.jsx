@@ -28,12 +28,19 @@ export default
             })
         })
     }
+    onCity = option => {
+        this.props.history.push({pathname: '/grt', query:{addr: option}})
+    }
+    //
+    jump = () => {
+        this.props.history.push('/users')
+    }
     render() {
         return (
             <div className="pages-city">
                 <header>
                     <span className="sp1">ele.me</span>
-                    <span className="sp2"><a>登录</a>|<a>注册</a></span>
+                    <span className="sp2" onClick={this.jump}><a>登录</a>|<a>注册</a></span>
                 </header>
                 <section>
                     <p>
@@ -83,7 +90,7 @@ export default
                                     <div className="cts">
                                         {
                                             this.state.datas[v].map((v,k) => (
-                                                <span>
+                                                <span onClick={() => this.onCity(v.name)}>
                                                     {v.name}
                                                 </span>
                                             ))

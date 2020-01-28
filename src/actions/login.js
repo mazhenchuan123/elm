@@ -10,5 +10,11 @@ export const dwCity = createActions({
             requestGet(api.DWcityL, options)
         )
     },
+   
+})
+
+export const Imgs = createActions({
+    Imgs: option => requestPost(api.Imgs)
 })
  
+// Imgs: option => requestPost(api.Imgs)

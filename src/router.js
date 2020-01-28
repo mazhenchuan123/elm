@@ -6,7 +6,7 @@ import { Basic, Users, City, Grt } from '@/services/ads'
 const routes = [
 	{
 		component: Users,
-		path: '/users',	
+		path: '/users',
 	},
 	{
 		component: City,
@@ -21,11 +21,20 @@ const routes = [
 	{
 		component: Basic,
 		path: '/',
-	
+		routes: [
+			{
+				component: Grt,
+				path: '/grt'
+			},
+			{
+				component: City,
+				path: '/city',
+			},	
+		]
 	}
 ]
 
-export default class extends React.PureComponent {
+export default class extends React.Component {
 	render () {
 		return(
 			<BrowserRouter >

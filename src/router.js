@@ -24,6 +24,10 @@ import {
 	InvoiceRecord,
 	Usecart,
 	VipcardDetail,
+	Payment,
+	QuestionDetail,
+	BenefitDetail,
+	BenefitHistory,
 } from '@/services/ads'
 
 const routes = [
@@ -45,6 +49,14 @@ const routes = [
 				path: '/balance',
 			},
 			{
+				component:		BenefitHistory,
+				path: '/benefit/history',
+			},
+			{
+				component:	BenefitDetail,
+				path: '/benefit/detail',
+			},
+			{
 				component: Benefit,
 				path: '/benefit',
 			},
@@ -58,9 +70,14 @@ const routes = [
 				path: '/points',
 			},
 			{
+				component: 	Payment,
+				path: '/vipcard/payment',
+			},
+			{
 				component: Order,
 				path: '/order',
 			},
+		
 			{
 				component: Integral,
 				path: '/integral',
@@ -84,6 +101,11 @@ const routes = [
 			{
 				component: Download,
 				path: '/download',
+			},
+			
+			{
+				component: QuestionDetail,
+				path: '/service/questiondetail',
 			},
 			{
 				component: Service,

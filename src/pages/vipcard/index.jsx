@@ -5,7 +5,9 @@ import { remitData } from '@/constants/vipcard'
 import './style.less'
 
 export default class extends PureComponent {
-
+	onClick = () => {
+		this.props.history.push('/vipcard/payment')
+	}
 	render() {
 		return (
 			<div className="pages_vipcard">
@@ -39,7 +41,7 @@ export default class extends PureComponent {
 					<p className="vipcard_buy_title">开通会员</p>
 					<div className="vipcard_buy_vip">
 						<p>1个月 <span>￥20</span></p>
-						<button>购买</button>
+						<button onClick={this.onClick}>购买</button>
 					</div>
 				</div>
 				<Lists

@@ -1,0 +1,83 @@
+.comm_card{
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  .comm_card_top{
+    display: flex;
+    width: 100%;
+    background: url(../../assets/ju.png)  repeat-x 0 0 white;
+    border-top-left-radius: .06rem;
+    border-top-right-radius: .06rem;
+    background-size: .2rem;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    .comm_card_left{
+      width: 1.4rem;
+      border-right: 1px dashed #ccc ;
+      p{
+        font-size: .3rem;
+        color: #ff5340;
+        font-weight: bolder;
+        span{
+          font-size: .6rem;
+          color: #ff5340;
+         position: static;
+        }
+      }
+      span{
+        color: #999;
+        display: inline-block;
+        font-size: .2rem;
+        position: relative;
+        top: -5px;
+        label{
+          display: inline-block;
+          margin: 0 5px;
+          font-size: .2rem;
+        }
+      }
+    }
+    .comm_card_right{
+      flex: 1;
+      display: flex;
+      padding: 7px 0px 7px 20px;
+      box-sizing: border-box;
+      .card_right_info{
+       
+        h2{
+          font-weight: normal;
+          color: #666;
+        }
+        p{
+          font-size: .2rem;
+          color: #999;
+        }
+      }
+      .card_right_date{
+        flex: 1;
+        padding-right: 10px;
+        box-sizing: border-box;
+        color: #ff5340;
+        text-align: right;
+        p{
+          color: #ccc;
+        }
+      }
+    }
+  }
+  .comm_card_top_disabled{
+    background: url(../../assets/disju.png)  repeat-x 0 0 white !important;
+    background-size: 12px !important;
+  }
+  .comm_card_btm{
+   background: #f9f9f9;
+   padding: 10px 20px;
+   box-sizing: border-box;
+   font-size: 10px;
+   color: #999;
+  }
+  
+ 
+  
+}

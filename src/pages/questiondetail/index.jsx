@@ -11,10 +11,7 @@ export default class extends PureComponent {
 		return (
 			<div className="pages_questiondetail">
 				<Head title={data.title} />
-				<div className="questiondetail_body">
-					{
-						data.content
-					}
+				<div className="questiondetail_body" dangerouslySetInnerHTML={{__html: data.content}}>
 				</div>
       </div>
 		)

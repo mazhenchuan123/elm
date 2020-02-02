@@ -75,12 +75,12 @@ class extends PureComponent {
 							<div className="benfit_redenvelope">
 								<div className="benfit_redenvelope_body">
 										<div className="benfit_num">
-												<p>有<span>3</span>个红包即将到期</p>
-												<IconBtn 
-													text="红包说明"
-													iconClass="icon-shuoming"
-													onClick={this.handelClick}
-												/>
+											<p>有<span>{hongBaosData && hongBaosData.length}</span>个红包即将到期</p>
+											<IconBtn 
+												text="红包说明"
+												iconClass="icon-shuoming"
+												onClick={this.handelClick}
+											/>
 										</div>
 										<div className="benfit_list_box">
 											{

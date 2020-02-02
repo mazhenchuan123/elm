@@ -26,7 +26,12 @@ class extends React.PureComponent {
         >
           <div className="comm_card_left">
             <p style={{color: disabled && '#ccc' }}>
-              ￥<span style={{color: disabled && '#ccc' }}>{money}</span>
+              ￥<span style={{color: disabled && '#ccc' }}>
+                {
+                  parseInt(money) == money ? 
+                  money.toFixed(1) : money
+                }
+              </span>
             </p>
             <span>满<label>{condition}</label>元可用</span>
           </div>

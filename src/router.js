@@ -49,7 +49,7 @@ const routes = [
 				path: '/balance',
 			},
 			{
-				component:		BenefitHistory,
+				component: BenefitHistory,
 				path: '/benefit/history',
 			},
 			{

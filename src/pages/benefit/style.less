@@ -1,4 +1,126 @@
-.pages_basic{
+.pages_benefit{
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  .benefit_nav{
+    width: 100%;
+    background: white;
+    display: flex;
+    height: .8rem;
+    align-items: center;
+    p{
+      flex: 1;
+      text-align: center;
+     
+      span{
+        border-bottom:2px solid  white;
+        color: #333;
+        display: inline-block;
+        padding-bottom: 2px;
+      }
+      .active{
+        border-bottom:2px solid  #3190e8;
+        color: #3190e8;
+      }
+    }
+  }
+  .benefit_body{
+    flex: 1;
+    display: flex;
+    .benfit_redenvelope{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .benfit_redenvelope_body{
+        flex: 1;
+        .benfit_num{
+          width: 100%;
+          display: flex;
+          color: #666;
+          padding: 10px;
+          box-sizing: border-box;
+          display: flex;
+          p{
+            font-size: .2rem;
+            flex: 1;
+            span{
+              display: inline-block;
+              margin: 0 5px;
+              font-size: .2rem;
+              color: red;
+            }
+          }
+        }
+        .benfit_list_box{
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+        }
+        .benfit_history{
+          color: #999;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span{
+            font-size: .2rem;
+            line-height: 10px;
+          }
+          .iconfont{
+            font-size: .2rem;
+          }
+        }
+      }
+      .benefit_redenvelope_foot{
+        width: 100%;
+        height: .8rem;
+        background: white;
+        display: flex;
+      
+        p{
+          flex: 1;
+          height: 100%;
+          text-align: center;
+          line-height: 0.8rem;
+          color: #555;
+        }
+      }
+    }
+  }
+  
+}
+
+.pages_benefitdetail{
+  width: 100%;
+  height: 100%;
+  background: white;
+  .benefitdetail_body{
+    background: white;
+    div{
+      padding: 10px;
+      box-sizing: border-box;
+      h2{
+        font-weight: normal;
+        color: #333;
+      }
+      p{
+        font-size: .24rem;
+        color: #666;
+        line-height: .6rem;
+      }
+    }
+  }
+}
+
+.pages_benfit_history{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .benfit_history_body{
+    padding:0 10px;
+    box-sizing: border-box;
+    flex: 1;
+    overflow: auto;
+  }
 }

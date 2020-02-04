@@ -28,6 +28,8 @@ import {
 	QuestionDetail,
 	BenefitDetail,
 	BenefitHistory,
+	BenefitCommend,
+	BenefitExchange,
 } from '@/services/ads'
 
 const routes = [
@@ -47,6 +49,14 @@ const routes = [
 			{
 				component: Balance,
 				path: '/balance',
+			},
+			{
+				component: BenefitExchange,
+				path: '/benefit/exchange',
+			},
+			{
+				component: BenefitCommend,
+				path: '/benefit/commend',
 			},
 			{
 				component: BenefitHistory,

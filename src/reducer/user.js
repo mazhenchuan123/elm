@@ -1,6 +1,6 @@
 import { handleActions } from 'redux-actions'
 import { GET_ADDRESS, SEARCH_ADDRESS } from '@/constants/address'
-import { GET_HONGBAOS, GET_EXPIREDHONGBAOS } from '@/constants/hongbaos'
+import { GET_HONGBAOS, GET_EXPIREDHONGBAOS, GET_CAPTCHS, } from '@/constants/hongbaos'
 import _ from 'loadsh'
 // 最外层 必须这么写
 const defaultState = {
@@ -8,6 +8,7 @@ const defaultState = {
   searchAddressData: [],
   hongBaosData: [],
   expriedHongBaos: [],
+  captchas: '',
 }
 const setHongBaos = (data) => {
  
@@ -47,5 +48,5 @@ export default handleActions({
   [SEARCH_ADDRESS]: (state, action) => ({ ...state, searchAddressData: action.payload }),
   [GET_HONGBAOS]: (state, action) => ({ ...state, hongBaosData: setHongBaos(action.payload) }),
   [GET_EXPIREDHONGBAOS]: (state, action) => ({ ...state, expriedHongBaos: setExpriedHongBaos(action.payload) }),
-
+  [GET_CAPTCHS]: (state, action) => ({ ...state, captchas: action.payload }),
 }, defaultState)

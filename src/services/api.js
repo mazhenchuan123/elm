@@ -7,4 +7,5 @@ export default {
   hongBaos: `/api/promotion/v2/users/${user_id}/hongbaos`,
   expiredHongBaos: `/api/promotion/v2/users/${user_id}/expired_hongbaos`,
   exchangeHongBaos: `/api/v1/users/${user_id}/hongbao/exchange`,
+  captchas: `/api/v1/captchas`,
 } 

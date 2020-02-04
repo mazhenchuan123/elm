@@ -99,7 +99,7 @@ export default class extends PureComponent {
 		return 	Object.values(addressData).every( v =>  v !== '')
 	}
 	render() {
-		const { visitible, addressData } = this.state
+		const { visitible } = this.state
 		const address_detail = _.get(this.props, 'location.state.data.name', '')
 		const name = _.get(this.props, 'location.state.addressData.name', '')
 		const address = _.get(this.props, 'location.state.addressData.address', '')
@@ -153,13 +153,13 @@ export default class extends PureComponent {
 						新增地址
 					</button>
 				</div>
-				{
+				
 				 <Alert 
 					title="地址信息错误" 
 					visitible={visitible}
 					onCancel={this.onCancel}
 				 />
-				}
+				
       </div>
 		)
 	}

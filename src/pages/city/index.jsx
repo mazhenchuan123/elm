@@ -1,33 +1,48 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { dwCity } from '@/actions/login'
+import home  from '@/actions/home'
+import { CITY, POSITION } from '@/constants/actionTypes'
+import string from '@/utils/string'
 import axios from 'axios'
 import './index.less'
-import { object } from 'prop-types';
+import qs from 'qs'
+
 export default 
-@connect((state) => ({
-    adr: state
+@connect(state => ({
+    adr: state.index
 }),{
-    dwCity
+   CITY: home[string(CITY)],
+   POSITION: home[string(POSITION)]
+
 }) class extends React.Component {
-    state = {
+    constructor(props){
+        super(props)
+        props.POSITION({geohash: '31.22967,121.4762'}).then(res => {
+            console.log(res,'res')
+        })
+        // props.CITY({type: 'group'}).then(res => {
+        //     console.log(res)
+        // })
+    this.state = {
         adr: '',
         datas: []
     }
+}
     componentDidMount () {
         /*地理位置定位 */
-        axios.get('https://elm.cangdu.org/v2/pois/31.22967,121.4762').then(res => {
-            this.setState({
-                adr: res.data.city
-            })
-        })
+        // axios.get('https://elm.cangdu.org/v2/pois/31.22967,121.4762').then(res => {
+        //     this.setState({
+        //         adr: res.data.city
+        //     })
+        // })
         /*所有城市*/
-        axios.get('https://elm.cangdu.org/v1/cities?type=group').then(res => {
+        axios.get('/api/v1/cities?type=group').then(res => {
             this.setState({
                 datas: res.data
             })
         })
     }
+    
     onCity = option => {
         this.props.history.push({pathname: '/grt', query:{addr: option}})
     }
@@ -90,7 +105,7 @@ export default
                                     <div className="cts">
                                         {
                                             this.state.datas[v].map((v,k) => (
-                                                <span onClick={() => this.onCity(v.name)}>
+                                                <span onClick={() => this.onCity(v.name)} key={k}>
                                                     {v.name}
                                                 </span>
                                             ))

@@ -1,14 +1,11 @@
 import { handleActions } from 'redux-actions'
+import { DWCITY, IMG } from '@/constants/actionTypes'
 
 const defaultState = {
     userInfo:'',
     yan: ''
 }
 export default handleActions({
-    DWcity: (state, action) =>{ 
-        return {...state, userInfo: action.payload }
-    },
-    Imgs: (state, action) => {
-        return {...state, yan: action.payload}
-    }
+    [DWCITY]: (state, action) => ({ ...state, userInfo: action.payload}),
+    [IMG]: (state, action) => ({ ...state, yan: action.payload})
 }, defaultState)

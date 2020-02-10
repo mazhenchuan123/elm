@@ -19,6 +19,7 @@ const myPersistReducer = combineReducers({
 		rootPersistConfig,
 		rdc.home
 	),
+	user: rdc.user,
 	login: persistReducer(
 		rootPersistConfig,
 		rdc.login

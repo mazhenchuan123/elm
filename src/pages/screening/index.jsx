@@ -28,7 +28,7 @@ class extends Component {
         console.log(this.props.location.state,'----------')
         const { date = []} = this.props
         const da = '<'
-        return(
+        return (
             <div className="screening">
                 <header>
                     <div className="head">

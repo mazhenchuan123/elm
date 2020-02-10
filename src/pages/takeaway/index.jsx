@@ -32,14 +32,15 @@ class extends Component {
 	}
 	food = e => {
 		console.log(e)
+		console.log(this.props)
 		// this.props.histoey.push('/users/screening')
-		this.props.history.push({ pathname: '/users/screening', state: e })
+		this.props.history.push({ pathname: '/screening', state: e ,stata:this})
   	}
   
 	render() {
     const { data = [] } = this.state
     const { date = []} = this.props
-    console.log(this.state)
+    console.log(data)
     ////elm.cangdu.org/img//d/49/7757ff22e8ab28e7dfa5f7e2c2692jpeg.jpeg
                          // 164ad0b6a3917599.jpg
                          //https://fuss10.elemecdn.com/d/49/7757ff22e8ab28e7dfa5f7e2c2692jpeg.jpeg
@@ -49,7 +50,7 @@ class extends Component {
 					<p><img src="/image/a1.png" /></p>
 					<div className="takeawayHead">
 						地址
-          </div>
+          		</div>
 					<p><img src="/image/a2.png" /></p>
 				</header>
 				<section>

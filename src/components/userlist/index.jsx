@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
 import './style.less'
+import {withRouter} from 'react-router-dom'
 import defaultImg from './b3.gif'
-export default class extends Component {
+export default @withRouter class extends Component {
+  constructor(props) {
+    super(props)
+    console.log(this,'---')
+  }
     onError = e => {
         e.target.setAttribute('src', defaultImg)
     }
+    details1 = v => {
+      // console.log(this.props)
+      this.props.history.push({ pathname: '/details', state: v })
+    } 
     render() {
         const { date } = this.props
+        
         return (
             date.map((v,k) => {
                 let img = '//elm.cangdu.org/img/'+ v.license.business_license_image
                 return (
-                  <div key={k} className="secinfolist">
-                    <img src={img} onError={this.onError} className="infoimg" />
+                  <div key={k} className="secinfolist" onClick={() => this.details1(v)}>
+                    <ul className="info">
+                      <img src={img} onError={this.onError} className="infoimg" />
+                    </ul>
                     <ul className="details">
                       <li className="shopname">
                         <p className="brandID">品牌</p>
@@ -30,7 +42,8 @@ export default class extends Component {
                         </p>
                       </li>
                       <li className="fist">
-                        <p className="price">￥20起送 / {v.piecewise_agent_fee.tips}</p>
+                        <p className="price" >￥20起送 / {v.piecewise_agent_fee.tips}</p>
+                        
                         <p className="time">{v.distance} / <span className="times" style={{color:'#3190e8'}}> {v.order_lead_time} </span></p>
                       </li>
                     </ul>

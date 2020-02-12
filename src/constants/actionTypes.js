@@ -1,4 +1,6 @@
 export const DWCITY = 'DWCITY'
 export const IMG = 'IMG'
 export const CITY = 'CITY'
-export const POSITION = 'POSITION'
+export const GETCITY = 'GETCITY'
+export const SERCITY = 'SERCITY'
+export const HOTCITY = 'HOTCITY'

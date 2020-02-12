@@ -1,56 +1,40 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import home  from '@/actions/home'
-import { CITY, POSITION } from '@/constants/actionTypes'
+import { CITY, POSITION, HOTCITY, DWCITY } from '@/constants/actionTypes'
 import string from '@/utils/string'
-import axios from 'axios'
 import './index.less'
-import qs from 'qs'
 
 export default 
 @connect(state => ({
-    adr: state.index
+    cit: state.index
 }),{
    CITY: home[string(CITY)],
-   POSITION: home[string(POSITION)]
-
+   HOTCITY: home[string(HOTCITY)],
+   DWCITY: home[string(DWCITY)]
 }) class extends React.Component {
     constructor(props){
         super(props)
-        props.POSITION({geohash: '31.22967,121.4762'}).then(res => {
-            console.log(res,'res')
-        })
-        // props.CITY({type: 'group'}).then(res => {
-        //     console.log(res)
-        // })
-    this.state = {
-        adr: '',
-        datas: []
-    }
+        //所有城市
+        props.CITY('group')    
+        //热门城市 
+        props.HOTCITY('hot')
+        //定位城市
+        props.DWCITY('guess')
 }
-    componentDidMount () {
-        /*地理位置定位 */
-        // axios.get('https://elm.cangdu.org/v2/pois/31.22967,121.4762').then(res => {
-        //     this.setState({
-        //         adr: res.data.city
-        //     })
-        // })
-        /*所有城市*/
-        axios.get('/api/v1/cities?type=group').then(res => {
-            this.setState({
-                datas: res.data
-            })
-        })
-    }
-    
+    //所有城市跳转
     onCity = option => {
         this.props.history.push({pathname: '/grt', query:{addr: option}})
     }
-    //
+    //定位城市跳船
+    onCities = (coo) => {
+        this.props.history.push({pathname: '/grt', query:{addr: coo}})
+    }
     jump = () => {
         this.props.history.push('/users')
     }
     render() {
+ 
         return (
             <div className="pages-city">
                 <header>
@@ -62,53 +46,36 @@ export default
                         <span className="sp1">当前定位城市:</span>
                         <span className="sp2">定位不准时，请在城市列表选择</span>
                     </p>
-                    <p>
-                        <span className="sp1">{this.state.adr}</span>
+                    <p onClick = {() => this.onCities(this.props.cit.dwcity.id)} className="pss">
+                        <span className="sp1">{this.props.cit.dwcity.name ? this.props.cit.dwcity.name : 'loading'}</span>
                         <span className="sp2">></span>
                     </p>
-
+                    {/*热门城市*/}
                     <div className="re">
                         <p>热门城市</p>
                         <div className="cts">
-                            <span>
-                                上海
-                            </span>
-                            <span>
-                                哈尔滨
-                            </span>
-                            <span>
-                                南京
-                            </span>
-                            <span>
-                                广州
-                            </span>
-                            <span>
-                                厦门
-                            </span>
-                            <span>
-                                杭州
-                            </span>
-                            <span>
-                                天津
-                            </span>
-                            <span>
-                                青岛
-                            </span>
+                            {
+                              this.props.cit.hotcity.length > 0 ? this.props.cit.hotcity.map((v,k) => (
+                                    <span onClick={() => this.onCity(v.id)}  key={k} className="hotcity">
+                                       {v.name}
+                                    </span>
+                                )): 'loading'
+                            }
                         </div>
                     </div>
                     {/*所有城市 */}
                     <div className="re" >
                         {
-                            Object.keys(this.state.datas).sort().map((v,k) => (
+                            Object.keys(this.props.cit.data).sort().map((v,k) => (
                                 <div key={k}>
                                     <p>{v}</p>
                                     <div className="cts">
                                         {
-                                            this.state.datas[v].map((v,k) => (
-                                                <span onClick={() => this.onCity(v.name)} key={k}>
+                                            this.props.cit.data[v].map((v,k) => 
+                                                <span onClick={() => this.onCity(v.id)} key={k}>
                                                     {v.name}
                                                 </span>
-                                            ))
+                                            )
                                         }
                                     </div>
                                 </div>

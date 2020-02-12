@@ -1,10 +1,43 @@
+// import React from 'react';
+// import './index.less'
+// import { connect } from 'react-redux'
+// import  getCeshi  from '@/actions/login'
+// import { DWCITY } from '@/constants/actionTypes'
+// import string from '@/utils/string'
+
+
+// export default @connect((state) => ({
+//     adr: state.login
+// }),{
+//     DWcity: getCeshi[string(DWCITY)],
+// }) class extends React.Component {
+//     constructor(props){
+//         super(props)
+//         console.log(this.props.name)
+//         props.DWcity(this.props.name).then(res => {
+//             if(res.payload.status == 0){
+//                 alert(res.payload.message)
+//             }else{
+//                 alert('登录成功')
+//             }
+//         })
+//     }
+
+//     render() {
+//         return (
+//             <div>
+//                 <button>登录</button>
+//             </div>
+//         )
+//     }
+// }
+
 import React from 'react';
 import './index.less'
 import { connect } from 'react-redux'
 import  getCeshi  from '@/actions/login'
 import { DWCITY, IMG } from '@/constants/actionTypes'
 import string from '@/utils/string'
-import qs from 'qs'
 export default @connect((state) => ({
     adr: state.login
 }),{

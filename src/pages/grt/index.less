@@ -6,7 +6,6 @@
     font-size: 0.26rem;
     width: 100%;
     height: 100%;
-    background-color: red;
     display: flex;
     flex-direction: column;
     header{
@@ -32,6 +31,7 @@
     section{
         flex: 1;
         background-color: #f5f5f5;
+        overflow: auto;
         .grt-yop{
             width: 100%;
             height: 2rem;
@@ -40,6 +40,7 @@
             padding-left: 0.2rem;
             padding-right: 0.2rem;
             box-sizing: border-box;
+            border-bottom: 1px solid #ccc;
             input{
                 width: 100%;
                 height: 0.6rem;
@@ -59,6 +60,27 @@
             padding-left: 0.2rem;
             padding-right: 0.2rem;
             box-sizing: border-box;
+        }
+        .ser-history{
+            width: 100%;
+            height: 8.15rem;
+            position: fixed;
+            top: 3.2rem;
+            overflow: auto;
+            div{
+                width: 100%;
+                background-color: #fff;
+                border-bottom: 1px solid #ccc;
+                line-height: 0.4rem;
+                padding-top: 0.15rem;
+                padding-bottom: 0.15rem;
+                padding-left: 0.2rem;
+                box-sizing: border-box;
+                .sp{
+                    font-size: 0.22rem;
+                    color: #adadad;
+                }
+            }
         }
     }
 }

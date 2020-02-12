@@ -24,6 +24,7 @@ export function requestPost(url, action = {}) {
 }
 
 export function requestGet(url, action = {}) {
+
 	return new Promise((resolve, reject) => {
 		axios({
 			method: 'get',

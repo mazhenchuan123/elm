@@ -46,16 +46,16 @@ axios.interceptors.response.use(response => {
 })
 
 export function requestPost(url, action = {}) {
-	const store = window.store.getState()
-	const token = _.get(store, 'login.userInfo', '')
-	if(token) {
-		action = { ...action, token }
-	}
+	// const store = window.store.getState()
+	// const token = _.get(store, 'login.userInfo', '')
+	// if(token) {
+	// 	action = { ...action, token }
+	// }
 	return new Promise((resolve, reject) => {	
 		axios({
 			method: 'post',
 			url,
-			data: qs.stringify(action),
+			data: action,
 		})
 			.then(res => {
 				resolve(res.data)
@@ -67,9 +67,26 @@ export function requestPost(url, action = {}) {
 }
 
 export function requestGet(url, action = {}) {
+
 	return new Promise((resolve, reject) => {
 		axios({
 			method: 'get',
+			url,
+			params: action,
+		})
+			.then(res => {
+				resolve(res.data)
+			})
+			.catch(err => {
+				reject(err)
+			})
+	})
+}
+
+export function requestDelete(url, action = {}) {
+	return new Promise((resolve, reject) => {
+		axios({
+			method: 'Delete',
 			url,
 			params: qs.stringify(action),
 		})

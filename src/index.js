@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import { persistStore } from 'redux-persist'   //数据持久化
 import { PersistGate } from 'redux-persist/lib/integration/react'
 import '@/styles/iconfont.css'
+import '@/styles/icon.css'
 import '@/styles/index.less'
 import '@/styles/reset.css'
 import '@/styles/rem.js'

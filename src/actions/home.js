@@ -3,6 +3,7 @@ import { requestGet } from '@/utils/request'
 import { createActions } from 'redux-actions'
 import { CITY, GETCITY, SERCITY, HOTCITY, DWCITY } from '@/constants/actionTypes'
 import api from '@/services/api'
+import apis from '@/services/api'
 
 export default createActions({
     [CITY]: city => requestGet(api.CityL+"?type="+city),
@@ -12,3 +13,10 @@ export default createActions({
     [SERCITY]: (opt, rev) => requestGet(api.SerCityL+"?city_id="+opt+"&keyword="+rev+"$type=search")
 })
  
+export const home =  createActions({
+  CESHI: options => requestGet(apis.homepage),
+  DETAILS: options => requestGet(apis.homedetails),
+  EVR: options => requestGet(apis.homeevr,options),
+  EVRS: options => requestGet(apis.homeevrs)
+})
+

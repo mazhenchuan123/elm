@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { PureComponent } from 'react';
+import { renderRoutes } from 'react-router-config'
 import './style.less'
 import User from '@/components/User'
 
-export default class Fn extends React.Component{
-    render() {
-        return (
-            <div>
+export default class extends PureComponent {
+
+	render() {
+		return (
+			<div className="pages_users">
                 <User/>
-            </div>
-        )
-    }
+				{renderRoutes(this.props.route.routes)}
+             </div>
+		)
+	}
 }
 
 
@@ -104,4 +107,6 @@ export default class Fn extends React.Component{
 //         )
 //     }
 // }
+
+
 

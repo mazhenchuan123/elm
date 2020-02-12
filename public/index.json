@@ -1,0 +1,34 @@
+[
+    {
+        "img":"/image/b8.gif",
+        "name":"甜品饮品"
+    },
+    {
+        "img":"/image/b1.gif",
+        "name":"商超便利"
+    },
+    {
+        "img":"/image/b2.gif",
+        "name":"美食"
+    },
+    {
+        "img":"/image/b3.gif",
+        "name":"简餐"
+    },
+    {
+        "img":"/image/b4.gif",
+        "name":"新店特惠"
+    },
+    {
+        "img":"/image/b5.gif",
+        "name":"准时达"
+    },
+    {
+        "img":"/image/b6.gif",
+        "name":"预定早餐"
+    },
+    {
+        "img":"/image/b7.gif",
+        "name":"土豪推荐"
+    }
+]

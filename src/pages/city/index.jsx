@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import home  from '@/actions/home'
-import { CITY, POSITION, HOTCITY, DWCITY } from '@/constants/actionTypes'
+import { CITY, HOTCITY, DWCITY } from '@/constants/actionTypes'
 import string from '@/utils/string'
 import './index.less'
 

@@ -41,8 +41,8 @@ class extends PureComponent {
 	handelClick =() => {
 		this.props.history.push('/benefit/detail')
 	}
-	goHistory = () => {
-		this.props.history.push('/benefit/history')
+	goJump = path => {
+		this.props.history.push(path)
 	}
 	render() {
 		const { active } = this.state
@@ -89,13 +89,18 @@ class extends PureComponent {
 												))
 											}
 										</div>
-										<div className="benfit_history" onClick={this.goHistory}>
+										<div className="benfit_history" onClick={() => this.goJump('/benefit/history')}>
 											<span>查看历史红包</span> <span className="iconfont icon-you1"></span>
 										</div>
 									</div>
 								<div className="benefit_redenvelope_foot">
-									<p style={{ borderRight: '1px solid #f5f5f5' }}>兑换红包</p>
-									<p>推荐有奖</p>
+									<p 
+										style={{ borderRight: '1px solid #f5f5f5' }}
+										onClick={() => this.goJump('/benefit/exchange')}
+									>
+										兑换红包
+									</p>
+									<p onClick={() => this.goJump('/benefit/commend')}>推荐有奖</p>
 								</div>
 							</div>
 						) : (

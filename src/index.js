@@ -10,6 +10,25 @@ import '@/styles/icon.css'
 import '@/styles/index.less'
 import '@/styles/reset.css'
 import '@/styles/rem.js'
+import axios from 'axios'
+// const ajax = () => {
+// 	return axios.get('/api/v2/signout')
+// }
+// const promise = new Promise((resolve, reject) => {
+// 	ajax()
+// 		.then(() => resolve('ok'))
+
+// })
+// promise
+// 	.then(res => {
+// 		return ajax()
+// 	})
+// 		.then( res => {
+// 			console.log('第三次')
+// 		})
+
+
+
 ReactDOM.render(
 	<Provider store={store}>
 		<PersistGate loading={null} persistor={persistStore(store)}>

@@ -6,6 +6,8 @@ import {
 	Basic, 
 	Users,
 	Home,
+	City, 
+	Grt,
 	Profile,
 	Balance,
 	Benefit,
@@ -42,9 +44,27 @@ const routes = [
 		path: '/users',
 	},
 	{
+		component: City,
+		path: '/city',
+		routes: [
+			{
+				component: Grt,
+				path: '/city/grt'
+			}
+		]	
+	},
+	{
 		component: Basic,
 		path: '/',
 		routes: [
+			{
+				component: Grt,
+				path: '/grt'
+			},
+			{
+				component: City,
+				path: '/city',
+			},	
 			{
 				component: Search,
 				path: '/search',
@@ -168,7 +188,7 @@ const routes = [
 	}
 ]
 
-export default class extends React.PureComponent {
+export default class extends React.Component {
 	render () {
 		return(
 			<BrowserRouter >

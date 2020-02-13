@@ -2,6 +2,8 @@ import loader from '@/utils/loader'   // 路由懒加载
 
 export const Basic = loader(() => import('@/pages/basic'))
 export const Users = loader(() => import('@/pages/users'))
+export const City = loader(() => import('@/pages/city'))
+export const Grt = loader(() => import('@/pages/grt'))
 export const Home = loader(() => import('@/pages/home'))
 export const Profile = loader(() => import('@/pages/profile'))
 export const Balance = loader(() => import('@/pages/balance'))

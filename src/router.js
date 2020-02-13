@@ -1,10 +1,13 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
+import loader from '@/utils/loader'   // 路由懒加载
 import { 
 	Basic, 
 	Users,
 	Home,
+	City, 
+	Grt,
 	Profile,
 	Balance,
 	Benefit,
@@ -21,6 +24,10 @@ import {
 	SearchAddress,
 	BalanceDetail,
 	PointsDetail,
+	Takeaway,
+	Search,
+	Screening,
+	Details,
 	InvoiceRecord,
 	Usecart,
 	VipcardDetail,
@@ -32,16 +39,50 @@ import {
 	BenefitExchange,
 } from '@/services/ads'
 
+
 const routes = [
 	{
 		component: Users,
 		path: '/users',
-		
+	},
+	{
+		component: City,
+		path: '/city',
+		routes: [
+			{
+				component: Grt,
+				path: '/city/grt'
+			}
+		]	
 	},
 	{
 		component: Basic,
 		path: '/',
 		routes: [
+			{
+				component: Grt,
+				path: '/grt'
+			},
+			{
+				component: City,
+				path: '/city',
+			},	
+			{
+				component: Search,
+				path: '/search',
+			},
+			{
+				component: Details,
+				path: '/details',
+			},
+			{
+				component: Screening,
+				path:'/screening',
+			},
+			{
+				component: Takeaway,
+				path: '/takeaway',
+			},
 			{
 				component: BalanceDetail,
 				path: '/balance/detail',
@@ -157,7 +198,7 @@ const routes = [
 	}
 ]
 
-export default class extends React.PureComponent {
+export default class extends React.Component {
 	render () {
 		return(
 			<BrowserRouter >

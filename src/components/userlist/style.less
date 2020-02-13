@@ -1,0 +1,84 @@
+.secinfolist{
+    width: 100%;
+    line-height: 0.5rem;
+    display: flex;
+    padding: 0.15rem 0;
+    .info{
+        width: 22%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .infoimg{
+        width: 1rem;
+        height: auto;
+    }
+    .details{
+        width: 78%;
+        padding-left: 0.2rem;
+        box-sizing: border-box;
+        .brandID{
+            background: #ffd930;
+        }
+        .shopname{
+            
+            display: flex;
+            .shopnames{
+                padding-left: 0.1rem;
+                box-sizing: border-box;
+                flex: 1;
+                font-size: 0.24rem;
+                white-space: nowrap;
+                overflow: hidden;    /* 内容超出宽度时隐藏超出部分的内容 */
+                text-overflow: ellipsis;  
+            }
+            
+        }
+        .express{
+            display: flex;
+            .press{
+                flex: 1;
+            }
+            .type{
+                .fn{
+                    background: #3190e8;
+                    color: #fff;
+                    padding: 0 0.05rem;
+                    box-sizing: border-box;
+                    border: 0.1px solid #3190e8;
+                }
+                .zs{
+                    padding: 0 0.05rem;
+                    box-sizing: border-box;
+                    border: 0.1px solid #3190e8;
+                    background: #fff;
+                    color: #3190e8; 
+                }
+            }
+        }
+        .fist{
+            width: 100%;
+            display: flex;
+            
+            .price{
+                flex: 1;
+                font-size:1vw;
+                transform: scale(1);
+                line-height: 0.2rem;
+            }
+            .times{
+                color: #3190e8;
+                font-size:1vw;
+                transform: scale(1);
+                line-height: 0.2rem;
+            }
+            .time{
+                font-size:1vw;
+                transform: scale(1);
+                line-height: 0.2rem;
+            }
+        }
+        
+    }
+}

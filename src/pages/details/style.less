@@ -1,0 +1,289 @@
+.details{
+    width:100%;
+    height: 100%;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    .back{
+        position: absolute;
+        top: 0.1rem;
+        left: 0.1rem;
+        color: #fff;
+    }
+    .detailshead{
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        overflow: hidden;
+        .detailsheadL{
+            width: 1.6rem;
+            height: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .headimg{
+                width: 1.2rem;
+                height: 1.2rem;
+                display: block;
+            }
+        }
+        .detailsheadR{
+            flex: 1;
+            color: #fff;
+            padding-top: 0.2rem;
+            box-sizing: border-box;
+            h2{
+                padding-top: 0.15rem;
+                box-sizing: border-box;
+            }
+            p{
+                font-size: 0.2rem;
+                line-height: 0.4rem;
+            }
+        }
+    }
+    .detailstype{
+        background: #fff;
+        width:100%;
+        height: 1rem;
+        display: flex;
+        line-height: 1rem;
+        .foo{
+            color: #3190e8;
+        }
+        p{
+            flex: 1;
+            line-height: 1rem;
+            text-align: center;
+        }
+    }
+    .shopping{
+        overflow: auto;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        section{
+            overflow: auto;
+            flex: 1;
+            display: flex;
+            .secL{
+                line-height: 1.4rem;
+                text-align: center;
+                overflow: auto;
+            }
+            .secR{
+                flex: 1;
+                overflow: auto;
+                .size{
+                    font-size: 0.2rem;
+                    color: #999;
+                }
+                .info{
+                    width: 100%;
+                        display: flex;
+                        .img{
+                            width: 1.4rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                width: 1rem;
+                                height: auto;
+                            }
+                        }
+                        .infoinfo{
+                            flex: 1;
+                            padding-top: 0.2rem;
+                            box-sizing: border-box;
+                            p{
+                                font-size: 0.2rem;
+                            }
+                            .red{
+                                color: red;
+                            }
+                            .qi{
+                                font-size: 0.2rem;
+                            }
+                            .count{
+                                display: flex;
+                                .countL{
+                                    display: block;
+                                    flex: 1;
+                                    
+                                }
+                                .counts{
+                                    .redu{
+                                        display: inline-block;
+                                        width: 0.4rem;
+                                        height: 0.4rem;
+                                        border-radius: 50%;
+                                        line-height: 0.3rem;
+                                        text-align: center;
+                                        border: 1px solid #3190e8;
+                                        color: #3190e8;
+                                        box-sizing: border-box;
+                                    }
+                                    .nums{
+                                        display: inline-block;
+                                        padding:0 0.1rem;
+                                        box-sizing: border-box;
+                                    }
+                                    .auxspecifications{
+                                        display: inline-block;
+                                        width: 1rem;
+                                        height: 0.42rem;
+                                        text-align: center;
+                                        line-height: 0.42rem;
+                                        border-radius: 0.1rem;
+                                        color: #fff;
+                                        background: #3190e8;
+                                    }
+                                    .add{
+                                        display: inline-block;
+                                        width: 0.45rem;
+                                        height: 0.42rem;
+                                        box-sizing: border-box;
+                                        border-radius: 50%;
+                                        line-height: 0.3rem;
+                                        text-align: center;
+                                        border: 1px solid #fff;
+                                        color: #fff;
+                                        background: #3190e8;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+            }
+        }
+        footer{
+            position: relative;
+            width:100%;
+            height: 1rem;
+            position: absolute;
+            bottom: 0;
+            background: #999;
+            .num{
+                position: absolute;
+                left: 1.1rem;
+                bottom: 1rem;
+                width: 0.4rem;
+                height: 0.4rem;
+                text-align: center;
+                color: #fff;
+                border-radius: 50%;
+                background: red;
+                z-index: 9;
+            }
+            .shpopingimg{
+                position: relative;
+                top: -0.3rem;
+                left: 0.5rem;
+                width: 1rem;
+                height: auto;
+            }
+            .shoppingimggo{
+                position: relative;
+                top: -0.4rem;
+                left: -0.4rem;
+                width: 0.8rem;
+                height: auto;
+            }
+        }
+    }
+    .evr{
+        flex: 1;
+        overflow: auto;
+        background: yellow;
+        display: flex;
+        flex-direction: column;
+        .evrevr{
+            background: #fff;
+            padding: 0 0.1rem;
+            box-sizing: border-box;
+            span{
+                padding: 0.05rem;
+                border-radius: 0.02rem;
+                background: #61b0f8;
+                font-size: 0.22rem;
+                color: #75808d;
+                margin: 0.05rem;
+                display: inline-block;
+                border-radius: 0.05rem;
+            }
+            .no{
+                background: #f5f5f5;
+                color: #b5b5b5;
+            }
+            .foo{
+                background: #3190e8;
+                color: #fff;
+            }
+        }
+        .evrall{
+            flex: 1;
+            overflow: auto;
+            .evrsdiv{
+                display: flex;
+                padding: 0.1rem 0;
+                box-sizing: border-box;
+                border-bottom: 1px solid #ccc;
+                .evrdivimg{
+                    width: 1rem;
+                    .evrimg{
+                        width: 0.7rem;
+                        height: auto;
+                        border-radius: 50%;
+                    }
+                }
+                .evaluationdetails{
+                    flex: 1;
+                    width: 100%;
+                    font-size:1vw;
+                    transform: scale(1);
+                    font-weight: 300;
+                    .evaluationdetailsnames{
+                        width: 100%;
+                        display: flex;
+                        
+                        .evaluationdetailsname{
+                            flex: 1;
+                        }
+                        .time{
+                            padding-left: 0.2rem;
+                            box-sizing: border-box;
+                            font-weight: 300;
+                        }
+                        
+                    }
+                    .xing{
+                        width: 0.2rem;
+                        height: auto;
+                    }
+                    .evaluate{
+                        display: flex;
+                        dl{
+                            display: inline-block;
+                            font-size:1vw;
+                            transform: scale(1);
+                            dd{
+                                font-size:1vw;
+                                transform: scale(1);  
+                            }
+                        }
+                        .evaluateimg{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            display: inline-block;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}

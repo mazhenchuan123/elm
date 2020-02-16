@@ -49,7 +49,7 @@ const routes = [
 		routes: [
 			{
 				component: Grt,
-				path: '/city/grt'
+				path: '/grt'
 			}
 		]	
 	},
@@ -58,13 +58,13 @@ const routes = [
 		path: '/',
 		routes: [
 			{
-				component: Grt,
-				path: '/grt'
-			},
-			{
 				component: City,
 				path: '/city',
 			},	
+			{
+				component: Grt,
+				path: '/grt'
+			},
 			{
 				component: Search,
 				path: '/search',
@@ -111,7 +111,7 @@ const routes = [
 				path: '/points',
 			},
 			{
-				component: 	Payment,
+				component: Payment,
 				path: '/vipcard/payment',
 			},
 			{

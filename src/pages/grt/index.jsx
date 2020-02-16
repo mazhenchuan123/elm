@@ -12,7 +12,6 @@ export default @connect(state => ({
 }) class extends Component{
     constructor(props){
         super(props)
-       
         this.state = {
             addr: '',
             sercity: []
@@ -27,7 +26,6 @@ export default @connect(state => ({
     onC  = e => {
         this.setState({
             addr: e.target.value,
-            datu: []
         })
     }
    //点击提交
@@ -37,6 +35,11 @@ export default @connect(state => ({
     //切换城市
     onQ = () => {
         this.props.history.replace('city') //直接返回想要的页面 
+    }
+    //点击跳转主页
+    onjump = (opt) => {
+        console.log(opt)
+        // this.props.history.push({pathname: '/grt', query:{addr: coo}})
     }
     render() {
         return (
@@ -59,7 +62,7 @@ export default @connect(state => ({
                     <div className="ser-history">
                         {
                             this.props.idcity.searching ? this.props.idcity.searching.map((v,k) => (
-                                <div key = {k}>
+                                <div key = {k} onClick={() => this.onjump(v.name)}>
                                     <p>{v.name}</p>
                                     <p className="sp">{v.address}</p>
                                 </div>

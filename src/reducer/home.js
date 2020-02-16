@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions'
-import { CITY, GETCITY, SERCITY, HOTCITY, DWCITY } from '@/constants/actionTypes'
+import { CITY, GETCITY, SERCITY, HOTCITY, DWCITY, SERSHOP } from '@/constants/actionTypes'
 // 最外层 必须这么写
 const defaultState = {
   data: [],
@@ -7,6 +7,7 @@ const defaultState = {
   searching: [],
   hotcity: [],
   dwcity: '',
+  sershop:[],
   details:[],
   evrs:[],
   evr:[],
@@ -17,6 +18,7 @@ export default handleActions({
   [SERCITY]: (state, action) => ({...state, searching:action.payload }),
   [HOTCITY]: (state, action) => ({...state, hotcity:action.payload}),
   [DWCITY]: (state, action) => ({...state, dwcity:action.payload}),
+  [SERSHOP]: (state, action) => ({...state, sershop: action.payload}),
   CESHI: (state, action) => ({ ...state, data: action.payload }),
   DETAILS: (state, action) => ({ ...state, details: action.payload }),
   EVR:(state, action) => ({ ...state, evr:action.payload}),

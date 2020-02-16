@@ -8,6 +8,7 @@ export default {
         SerL: '/api/v1/cities/',
         SerCityL: '/api/v1/pois', //搜索城市信息
         signout: '/api/v2/signout',
+        serShopL: 'api/v4/restaurants', //搜索商家
         searchAddresses: '/api/v1/pois',
         addAddress: `/api/v1/users/${user_id}/addresses`,
         homepage:'https://elm.cangdu.org/shopping/restaurants?latitude=31.22967&longitude=121.4762', //主页轮播

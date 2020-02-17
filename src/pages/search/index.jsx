@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import home  from '@/actions/home'
 import { SERSHOP } from '@/constants/actionTypes'
 import string from '@/utils/string'
-
+import Head from '@/components/Head'
 
 import './style.less'
 export default @connect(state => ({
@@ -43,12 +43,7 @@ export default @connect(state => ({
            <div className="serch-dev">
                <header>
                     <div className="h-top">
-                        <span>
-                            《
-                        </span>
-                        <p>
-                            搜索
-                        </p>
+                        <Head title="搜索"/>
                     </div>
                     <div className="h-bottom">
                             <input 

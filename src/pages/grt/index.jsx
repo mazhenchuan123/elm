@@ -4,6 +4,7 @@ import home  from '@/actions/home'
 import { GETCITY, SERCITY} from '@/constants/actionTypes'
 import string from '@/utils/string'
 import './index.less'
+import Head from '@/components/Head'
 export default @connect(state => ({
     idcity: state.index
 }),{
@@ -45,10 +46,11 @@ export default @connect(state => ({
         return (
             <div className="pages-grt">
                 <header>
-                    <span onClick={this.back}>
+                    {/* <span onClick={this.back}>
                         《
                     </span>
-                    <p>{this.props.idcity.idcity.name}</p>
+                    <p>{this.props.idcity.idcity.name}</p> */}
+                    <Head className="head" title={this.props.idcity.idcity.name}/>
                     <span onClick={this.onQ}>
                         切换城市
                     </span>
